@@ -1,0 +1,24 @@
+.heading-1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.btn {
+    padding: 2.1rem 8.5rem;
+    font-family: $main-font;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    border: none;
+    color: $font-color-light;
+    transition: .2s;
+
+    &:hover {
+        box-shadow: 0rem 1rem 3rem .2rem rgba(0, 0, 0, 0.3);
+        transform: translateY(-.2rem);
+    }
+
+    &:active {
+        box-shadow: 0rem .5rem 2rem .1rem rgba(0, 0, 0, 0.3);
+        transform: translateY(-.1rem);
+    }
+}
