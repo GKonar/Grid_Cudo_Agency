@@ -1,0 +1,55 @@
+// VARIABLES
+// ***** COLORS ***** 
+$color-welcome: #87509c;
+$color-welcome-dark:#643a79;
+$color-services:#17c2a4;
+$color-team: #e7f1f8;
+$color-skills: #ffffff;
+$color-portfolio: #ffdd99;
+$color-testimonials: #d74680;
+$color-getintouch: #3c5499;
+$color-getintouch-dark: #273a71;
+$color-footer: #344b8e;
+
+$color-grey-dark: #787878;
+$color-grey-light-1: #aaa;
+
+// ***** FONTS ***** 
+$font-color-light: #fff;
+$font-color-dark: #3c4761;
+
+$main-font: 'Titillium Web', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border- box;
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-family: $main-font;
+}
+
+.container {
+    background-color: $color-grey-light-1;
+    color: $font-color-dark;
+
+    //MAIN-GRID
+    display: grid;
+    grid-template-rows: min-content 70vh repeat(7, min-content);
+    grid-template-columns: repeat( 10, [col-start] 1fr [col-end]);
+
+    & > * {
+        font-size: 2rem;
+    }
+}
+
+

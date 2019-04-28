@@ -1,0 +1,8 @@
+.nav {
+    grid-column: col-start 1 / col-end 10;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    
+}

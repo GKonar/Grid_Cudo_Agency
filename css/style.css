@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border- box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Titillium Web", sans-serif; }
+
+.container {
+  background-color: #aaa;
+  color: #3c4761;
+  display: grid;
+  grid-template-rows: min-content 70vh repeat(7, min-content);
+  grid-template-columns: repeat(10, [col-start] 1fr [col-end]); }
+  .container > * {
+    font-size: 2rem; }
+
+.nav {
+  grid-column: col-start 1 / col-end 10;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); }
+
+.welcome {
+  background-color: #87509c;
+  grid-column: col-start 1 / col-end 10; }
+
+.services {
+  background-color: #17c2a4; }
+
+.team {
+  background-color: #e7f1f8; }
+
+.skills {
+  background-color: #ffffff; }
+
+.portfolio {
+  background-color: #ffdd99; }
+
+.testimonials {
+  background-color: #d74680; }
+
+.getintouch {
+  background-color: #3c5499; }
+
+.footer {
+  background-color: #344b8e; }
