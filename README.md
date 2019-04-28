@@ -12,5 +12,10 @@ What i use:
 * BEM
 * NPM
 
+Feel free to check progress:
+
+Console: 
+* npm install
+* npm start
 
 
