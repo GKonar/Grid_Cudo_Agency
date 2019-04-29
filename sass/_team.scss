@@ -1,3 +1,96 @@
 .team {
     background-color: $color-team;
+    grid-column: col-start 1 / col-end 10;
+
+    // top content 
+    &__header {
+        display: grid;
+        grid-template-columns: 2fr repeat(4, 1fr) 2fr;
+        grid-template-rows: minmax( 22rem ,3.5fr) repeat(2, 1fr) .5fr;
+        justify-items: center;
+    }
+
+    &__heading {
+        letter-spacing: 4px;
+        padding-bottom: 2rem;
+        text-align: center;
+
+        grid-column: 2 / 6;
+        align-self: end;
+
+        &::after {
+            content: '';
+            margin-top: 1rem;
+            height: 4px;
+            width: 20%;
+            display: block;
+            background-color: rgba(#000, .15);
+            position: relative;
+            left: 38%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-weight: 300;
+
+        grid-column: 2 / 6;
+    }
+
+    //  bottom content
+
+    &__members {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+        grid-template-rows: 1fr .3fr;
+        grid-column-gap: 6rem;
+        padding: 0 14rem;
+    }
+
+    &__member {
+        display: grid;
+        grid-row-gap: 2.5rem;
+        justify-items: center;
+
+        &--img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        &--namerole-box {
+            text-align: center;
+        }
+
+        &--name {
+            text-transform: uppercase;
+        }
+
+        &--role {
+            color: #30bae7;
+            font-weight: 400;
+        }
+
+        &--about {
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        &--social {
+            
+            &-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                fill:#bdd1df;
+                transition: .3s;
+                
+                &:hover {
+                    fill:#94a3aeec;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
+

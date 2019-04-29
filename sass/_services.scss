@@ -7,7 +7,7 @@
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, 1fr) 2fr;
-        grid-template-rows: 3fr repeat(2, 1fr) 1fr;
+        grid-template-rows: 3.5fr repeat(2, 1fr) .5fr;
         justify-items: center;
     }
 
@@ -41,7 +41,6 @@
     }
 
     //  bottom content
-
     &__steps {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
