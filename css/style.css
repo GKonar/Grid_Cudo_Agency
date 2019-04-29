@@ -259,7 +259,7 @@ body {
       stroke-width: 3;
       animation: progress 2s ease-out forwards; }
     .skills__graph--circle-webdesign {
-      stroke: #30bae7; }
+      stroke: #30b9e733; }
     .skills__graph--circle-html {
       stroke: #d74680; }
     .skills__graph--circle-graphic {
@@ -282,7 +282,56 @@ body {
     stroke-dasharray: 0 100; } }
 
 .portfolio {
+  grid-column: col-start 1 / col-end 10;
   background-color: #ffdd99; }
+  .portfolio__header {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
+    grid-template-rows: 3.5fr 1fr .5fr;
+    justify-items: center; }
+  .portfolio__heading {
+    letter-spacing: 4px;
+    padding-bottom: 2rem;
+    text-align: center;
+    grid-column: 2 / 6;
+    align-self: end; }
+    .portfolio__heading::after {
+      content: '';
+      margin-top: 1rem;
+      height: 4px;
+      width: 20%;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: relative;
+      left: 38%; }
+  .portfolio__description {
+    text-align: center;
+    font-weight: 300;
+    grid-column: 2 / 6; }
+  .portfolio__nav-items {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 5fr repeat(8, minmax(8rem, 1fr)) 5fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center; }
+  .portfolio__nav-item {
+    background-color: #dcc291;
+    padding: 0 .7rem;
+    width: 7rem;
+    text-align: center;
+    border-radius: 2px;
+    transition: .2s; }
+    .portfolio__nav-item:hover {
+      background-color: #fff;
+      cursor: pointer; }
+  .portfolio__nav-item-1 {
+    grid-column: 4 / 5; }
+  .portfolio__nav-item-2 {
+    grid-column: 5 / 6; }
+  .portfolio__nav-item-3 {
+    grid-column: 6 / 7; }
+  .portfolio__nav-item-4 {
+    grid-column: 7 / 8; }
 
 .testimonials {
   background-color: #d74680; }

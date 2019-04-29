@@ -1,3 +1,85 @@
 .portfolio {
+    grid-column: col-start 1 / col-end 10;
     background-color: $color-portfolio;
+
+    // top content
+    &__header {
+        display: grid;
+        grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
+        grid-template-rows: 3.5fr 1fr .5fr;
+        justify-items: center;
+    }
+
+    &__heading {
+        letter-spacing: 4px;
+        padding-bottom: 2rem;
+        text-align: center;
+
+        grid-column: 2 / 6;
+        align-self: end;
+
+        &::after {
+            content: '';
+            margin-top: 1rem;
+            height: 4px;
+            width: 20%;
+            display: block;
+            background-color: rgba(#000, .15);
+            position: relative;
+            left: 38%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-weight: 300;
+
+        grid-column: 2 / 6;
+
+    }
+
+    &__nav {
+        &-items {
+            list-style: none;
+
+            display: grid;
+            grid-template-columns: 5fr repeat(8, minmax(8rem, 1fr)) 5fr;
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+        }
+
+        &-item {
+            background-color: $color-portfolio-dark;
+            padding: 0 .7rem;
+            width: 7rem;
+            text-align: center;
+            border-radius: 2px;
+            transition: .2s;
+
+            &:hover {
+                background-color: #fff;
+                cursor: pointer;
+            }
+        }
+
+        &-item-1 {
+            grid-column: 4 / 5;
+        }
+
+        &-item-2 {
+            grid-column: 5 / 6;
+        }
+
+        &-item-3 {
+            grid-column: 6 / 7;
+        }
+
+        &-item-4 {
+            grid-column: 7 / 8;
+        }
+    }
+
+    // bottom content
+
+    
 }
