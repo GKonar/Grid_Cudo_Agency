@@ -1,3 +1,108 @@
 .skills {
     background-color: $color-skills;
+    grid-column: col-start 1/ col-end 10;
+
+    // top content
+    &__header {
+        display: grid;
+        grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
+        grid-template-rows: 3.5fr repeat(2, 1fr) .5fr;
+        justify-items: center;
+    }
+
+    &__heading {
+        letter-spacing: 4px;
+        padding-bottom: 2rem;
+        grid-column: 2 / 6;
+        align-self: end;
+
+        &::after {
+            content: '';
+            margin-top: 1rem;
+            height: 4px;
+            width: 20%;
+            display: block;
+            background-color: rgba(#000, .15);
+            position: relative;
+            left: 38%;
+        }
+    }
+
+    &__description {
+        grid-column: 2 / 6;
+        text-align: center;
+    }
+
+    // bottom content
+
+    &__graphs {
+        padding: 0 12rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem , 1fr)); // responsive
+        grid-template-rows: 1fr .5fr;
+        grid-column-gap: 10rem;
+    }
+
+    &__graph {
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+        grid-row-gap: 2rem;
+        position: relative;
+
+        &--circle-bg {
+            fill: none;
+            stroke-width: 3;
+            stroke: #eee;
+        }
+
+        &--circle {
+            fill: none;
+            stroke-width: 3;
+            animation: progress 2s ease-out forwards;
+        }
+
+        &--circle-webdesign {
+            stroke: #30bae7;
+        }
+        
+        &--circle-html {
+            stroke: #d74680;
+        }
+        
+        &--circle-graphic {
+            stroke: #15c7a8;
+        }
+        
+        &--circle-ui {
+            stroke: #eb7d4b;
+        }   
+
+        &--percentage {
+            position: absolute;
+            font-size: 5rem;
+            font-weight: 300;
+            transform: translate(-50%, -50%);
+            top: 37%;
+            left: 52%;
+            
+            span {
+                font-size: 3rem;
+                padding-left: 2px;
+            }
+        }
+
+        &--text {
+        
+        }
+    }
+}
+
+// animations
+
+@keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
 }
