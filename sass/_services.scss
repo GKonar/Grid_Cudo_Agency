@@ -20,16 +20,9 @@
         align-self: end;
 
         &::after {
-            content: '';
-            margin-top: 1rem;
-            height: 4px;
-            width: 20%;
-            display: block;
-            background-color: rgba(#000, .15);
-            position: relative;
-            left: 38%;
-
-            // 4px solid rgba(#000, .15);
+            @include after;
+            width: 30%;
+            left: 32%;
         }
     }
 

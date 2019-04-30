@@ -1,3 +1,29 @@
 .footer {
     background-color: $color-footer;
+    color:$font-color-light;
+
+    grid-column: col-start 1 / col-end 10;
+    
+    display: grid;
+    justify-items: center;
+
+    &__social {
+        list-style: none;
+        
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1rem 2rem;
+
+        [class*="item"]:hover {
+            transition: .3s;
+            cursor: pointer;
+            color: #30bae7;
+        }
+
+        &--item {
+            grid-row: 2 / 3;
+        }
+    }
 }

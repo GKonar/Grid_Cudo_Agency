@@ -24,13 +24,7 @@
         justify-self: center;
 
         &::after {
-            content: '';
-            margin-top: 1rem;
-            height: 4px;
-            width: 20%;
-            display: block;
-            background-color: rgba(#000, .15);
-            position: relative;
+            @include after;
             left: 40%;
         }
     }

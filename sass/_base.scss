@@ -15,11 +15,25 @@ $color-footer: #344b8e;
 $color-grey-dark: #787878;
 $color-grey-light-1: #aaa;
 
+// ***** MIXINS ***** 
+@mixin after {
+    content: '';
+    margin-top: 1rem;
+    height: 4px;
+    width: 20%;
+    display: block;
+    background-color: rgba(#000, .15);
+    position: relative;
+    left: 38%;
+}
+
 // ***** FONTS ***** 
 $font-color-light: #fff;
 $font-color-dark: #3c4761;
 
 $main-font: 'Titillium Web', sans-serif;
+
+// ***** MEDIA QUERRIES *****
 
 
 *,

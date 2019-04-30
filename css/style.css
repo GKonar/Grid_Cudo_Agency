@@ -125,7 +125,9 @@ body {
       display: block;
       background-color: rgba(0, 0, 0, 0.15);
       position: relative;
-      left: 38%; }
+      left: 38%;
+      width: 30%;
+      left: 32%; }
   .services__description {
     font-weight: 300;
     grid-column: 2 / 6;
@@ -235,7 +237,9 @@ body {
       display: block;
       background-color: rgba(0, 0, 0, 0.15);
       position: relative;
-      left: 38%; }
+      left: 38%;
+      width: 40%;
+      left: 30%; }
   .skills__description {
     grid-column: 2 / 6;
     text-align: center; }
@@ -305,7 +309,9 @@ body {
       display: block;
       background-color: rgba(0, 0, 0, 0.15);
       position: relative;
-      left: 38%; }
+      left: 38%;
+      width: 40%;
+      left: 30%; }
   .portfolio__description {
     text-align: center;
     font-weight: 300;
@@ -379,6 +385,7 @@ body {
       display: block;
       background-color: rgba(0, 0, 0, 0.15);
       position: relative;
+      left: 38%;
       left: 40%; }
   .testimonials__description {
     text-align: center;
@@ -409,7 +416,80 @@ body {
       color: #ffdd99; }
 
 .getintouch {
-  background-color: #3c5499; }
+  background-color: #3c5499;
+  color: #fff;
+  grid-column: col-start 1 / col-end 10;
+  display: grid; }
+  .getintouch__header {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
+    grid-template-rows: repeat(2, 1fr) 1.5fr;
+    justify-items: center; }
+  .getintouch__heading {
+    letter-spacing: 4px;
+    padding-bottom: 2rem;
+    text-align: center;
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+    justify-self: center; }
+    .getintouch__heading::after {
+      content: '';
+      margin-top: 1rem;
+      height: 4px;
+      width: 20%;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: relative;
+      left: 38%;
+      width: 40%;
+      left: 30%; }
+  .getintouch__description {
+    text-align: center;
+    font-weight: 300;
+    grid-column: 2 / 6;
+    grid-row: 3 / 4; }
+  .getintouch__form {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
+    align-items: center;
+    grid-gap: 2rem 3rem;
+    position: relative; }
+    .getintouch__form--name, .getintouch__form--email, .getintouch__form--textarea {
+      border: none;
+      border-radius: 3px;
+      background-color: #273a71;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      font-style: "Titillium Web", sans-serif;
+      font-size: 1.8rem; }
+    .getintouch__form--name {
+      grid-column: 2 / 3; }
+    .getintouch__form--email {
+      grid-column: 3 / 4; }
+    .getintouch__form--textarea {
+      grid-column: 2 / 4; }
+  .getintouch__btn {
+    justify-self: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    background-color: #30bae7; }
 
 .footer {
-  background-color: #344b8e; }
+  background-color: #344b8e;
+  color: #fff;
+  grid-column: col-start 1 / col-end 10;
+  display: grid;
+  justify-items: center; }
+  .footer__social {
+    list-style: none;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem 2rem; }
+    .footer__social [class*="item"]:hover {
+      transition: .3s;
+      cursor: pointer;
+      color: #30bae7; }
+    .footer__social--item {
+      grid-row: 2 / 3; }
