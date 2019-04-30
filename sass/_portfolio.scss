@@ -2,6 +2,9 @@
     grid-column: col-start 1 / col-end 10;
     background-color: $color-portfolio;
 
+    display: grid;
+    
+
     // top content
     &__header {
         display: grid;
@@ -44,7 +47,7 @@
 
             display: grid;
             grid-template-columns: 5fr repeat(8, minmax(8rem, 1fr)) 5fr;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             justify-items: center;
         }
 
@@ -81,5 +84,31 @@
 
     // bottom content
 
-    
+    &__examples {
+        padding: 0 12rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50rem , 1fr)); // responsive
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem 2rem; 
+        justify-items: center;
+    }
+
+    &__example {
+        display: grid;
+        justify-items: center;
+        grid-gap: 2.5rem 0;
+        transition: .3s;
+
+        &--desc {
+            text-transform: uppercase;
+        }
+    }
+
+    &__btn {
+        background-color: $color-services;
+        justify-self: center;
+        margin-top: 8rem;
+        margin-bottom: 10rem;
+    }
 }

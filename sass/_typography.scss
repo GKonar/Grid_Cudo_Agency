@@ -21,6 +21,7 @@
     border: none;
     color: $font-color-light;
     transition: .2s;
+    border-bottom: 4px solid rgba(#000, .15);
 
     &:hover {
         box-shadow: 0rem 1rem 3rem .2rem rgba(0, 0, 0, 0.3);

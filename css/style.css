@@ -40,7 +40,8 @@ body {
   border-radius: 3px;
   border: none;
   color: #fff;
-  transition: .2s; }
+  transition: .2s;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.15); }
   .btn:hover {
     box-shadow: 0rem 1rem 3rem 0.2rem rgba(0, 0, 0, 0.3);
     transform: translateY(-0.2rem); }
@@ -283,7 +284,8 @@ body {
 
 .portfolio {
   grid-column: col-start 1 / col-end 10;
-  background-color: #ffdd99; }
+  background-color: #ffdd99;
+  display: grid; }
   .portfolio__header {
     display: grid;
     grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
@@ -312,7 +314,7 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: 5fr repeat(8, minmax(8rem, 1fr)) 5fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-items: center; }
   .portfolio__nav-item {
     background-color: #dcc291;
@@ -332,6 +334,25 @@ body {
     grid-column: 6 / 7; }
   .portfolio__nav-item-4 {
     grid-column: 7 / 8; }
+  .portfolio__examples {
+    padding: 0 12rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem 2rem;
+    justify-items: center; }
+  .portfolio__example {
+    display: grid;
+    justify-items: center;
+    grid-gap: 2.5rem 0;
+    transition: .3s; }
+    .portfolio__example--desc {
+      text-transform: uppercase; }
+  .portfolio__btn {
+    background-color: #17c2a4;
+    justify-self: center;
+    margin-top: 8rem;
+    margin-bottom: 10rem; }
 
 .testimonials {
   background-color: #d74680; }
