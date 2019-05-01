@@ -3,12 +3,28 @@
     background-color: $color-services;
     color: $font-color-light;
 
+    @media only screen and (max-width: $bp-huge and $bp-smallScreen) {
+        padding-bottom: 5rem;
+    }
+
     //  top content
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, 1fr) 2fr;
         grid-template-rows: 3.5fr repeat(2, 1fr) .5fr;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-huge) {
+            grid-template-rows: 2.5fr repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-rows: 2fr repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: 1.5fr repeat(2, 1fr);
+        }
     }
 
     &__heading {
@@ -24,6 +40,14 @@
             width: 30%;
             left: 32%;
         }
+        
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 3.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 3rem;
+        }
     }
 
     &__description {
@@ -31,6 +55,10 @@
         
         grid-column: 2 / 6;
         text-align: center;
+        
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.7rem;
+        }
     }
 
     //  bottom content
@@ -41,14 +69,39 @@
         grid-column-gap: 6rem;
 
         padding: 0 14rem;
+
+        @media only screen and (max-width: $bp-smallScreen) {
+            grid-template-columns: repeat(2, minmax(20rem , 1fr)); // responsive
+            grid-row-gap: 3rem;            
+        }
+
+        @media only screen and (max-width: $bp-big) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column-gap: 4rem;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            grid-row-gap: 4rem;
+        }
     }
 
     &__step {
        display: grid;
 
        justify-items: center;
-       grid-template-rows: 15rem min-content min-content; 
+       grid-template-rows: 15rem repeat(2, min-content); 
        grid-row-gap: 3rem;
+
+       @media only screen and (max-width: $bp-smallScreen) {
+        grid-row-gap: 1.5rem;            
+        }
+        
+       @media only screen and (max-width: $bp-huge) {
+        grid-row-gap: 1.5rem;
+        }
     }
 
     &__title {

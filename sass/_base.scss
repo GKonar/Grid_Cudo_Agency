@@ -33,17 +33,21 @@ $font-color-dark: #3c4761;
 
 $main-font: 'Titillium Web', sans-serif;
 
-// ***** MEDIA QUERRIES *****
+// ***** MEDIA QUERRIES BREAKPOINTS *****
+$bp-smallScreen: 78rem; //1250px
+$bp-huge: 68rem; // 1100px
+$bp-large: 62.5rem; // 1000px
+$bp-big: 56rem; // 900px
+$bp-medium: 50rem;// 800px
+$bp-small: 43rem; // 700px
+$bp-smallest: 37.5rem; // 600px
+$bp-mobileBig: 31rem; // 500px
+$bp-mobileMed: 25rem; // 400px
+$bp-mobileSm: 18.5rem; // 300px
+
 // @media only screen and (max-width: $bp-huge) {
 
 // }
-$bp-huge: 68rem;
-// $bp-large
-// $bp-big
-// $bp-medium
-// $bp-small
-// $bp-smallest
-
 
 *,
 *::before,
@@ -72,7 +76,11 @@ body {
     grid-template-columns: repeat( 10, [col-start] 1fr [col-end]);
 
     @media only screen and (max-width: $bp-huge) {
-        grid-template-rows: min-content 70vh repeat(7, min-content);
+        grid-template-rows: min-content 50vh repeat(7, min-content);
+    }
+
+    @media only screen and (max-width: $bp-mobileMed) {
+        grid-template-rows: min-content 40vh repeat(7, min-content);
     }
 }
 

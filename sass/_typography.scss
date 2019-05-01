@@ -32,4 +32,24 @@
         box-shadow: 0rem .5rem 2rem .1rem rgba(0, 0, 0, 0.3);
         transform: translateY(-.1rem);
     }
+
+    @media only screen and (max-width: $bp-huge) {
+        padding: 1.5rem 7rem;
+        &:hover,
+        &:active {
+            box-shadow: none;
+            transform: none;
+            outline: none;
+        }
+    }
+
+    @media only screen and (max-width: $bp-mobileMed) {
+        padding: 1.2rem 6rem;
+        font-size: 1.3rem;
+    }
+
+    @media only screen and (max-width:  $bp-mobileSm) {
+        padding: 1.2rem 5.6rem;
+        font-size: 1.2rem;
+    }
 }
