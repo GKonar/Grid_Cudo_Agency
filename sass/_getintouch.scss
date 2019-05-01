@@ -5,7 +5,6 @@
     grid-column: col-start 1 / col-end 10;
 
     display: grid;
-    display: none;
     
     // top-content 
 
@@ -14,6 +13,14 @@
         grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
         grid-template-rows: repeat(2 ,1fr) 1.5fr;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: min-content repeat(4, minmax(4rem, 1fr)) min-content;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+
+        }
     }
 
     &__heading {
@@ -24,6 +31,14 @@
         grid-column: 1 / 7;
         grid-row: 2 / 3; 
         justify-self: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 3.5rem;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            font-size: 3rem;
+        }
 
         &::after {
             @include after;
@@ -38,16 +53,33 @@
 
         grid-column: 2 / 6;
         grid-row: 3 / 4;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-column: 3 / 5;
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+
+        }
     }
 
     // bottom content --> form
     &__form {
         display: grid;
         grid-template-columns: .5fr repeat(2, 1fr) .5fr;
-        // justify-items: center;
         align-items: center;
         grid-gap: 2rem 3rem;
         position: relative;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: min-content repeat(2, 1fr) min-content;
+            grid-gap: 0;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+
+        }
 
         &--name,
         &--email,
@@ -59,14 +91,27 @@
             padding: 1.5rem 1rem;
             font-style: $main-font;
             font-size: 1.8rem;
+
+            @media only screen and (max-width: $bp-smallest) {
+                margin: .5rem 0;
+            }
+
         }
 
         &--name {
             grid-column: 2 / 3;
+            
+            @media only screen and (max-width: $bp-smallest) {
+                grid-column: 2 / 4;
+            }
         }
 
         &--email {
             grid-column: 3 / 4;
+            
+            @media only screen and (max-width: $bp-smallest) {
+                grid-column: 2 / 4;
+            }
         }
 
         &--textarea {

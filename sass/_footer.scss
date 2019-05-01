@@ -5,8 +5,7 @@
     grid-column: col-start 1 / col-end 10;
     
     display: grid;
-    justify-items: center;
-    display: none;
+    // justify-items: center;
 
     &__social {
         list-style: none;
@@ -27,5 +26,15 @@
         &--item {
             grid-row: 2 / 3;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+        }
     }
 }
+
+
