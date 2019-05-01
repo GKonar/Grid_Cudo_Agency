@@ -25,6 +25,11 @@
         @media only screen and (max-width: $bp-smallest) {
             grid-template-rows: 1.5fr repeat(2, 1fr);
         }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-template-rows: repeat(2, 1fr);
+            padding: 2.5rem 0;
+        }
     }
 
     &__heading {
@@ -86,6 +91,11 @@
         @media only screen and (max-width: $bp-smallest) {
             grid-row-gap: 4rem;
         }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-template-columns: 1fr;
+            padding: 0 4rem;
+        }
     }
 
     &__step {
@@ -98,9 +108,9 @@
        @media only screen and (max-width: $bp-smallScreen) {
         grid-row-gap: 1.5rem;            
         }
-        
-       @media only screen and (max-width: $bp-huge) {
-        grid-row-gap: 1.5rem;
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-row-gap: .5rem;   
         }
     }
 

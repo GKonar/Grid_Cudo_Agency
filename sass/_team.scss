@@ -2,12 +2,33 @@
     background-color: $color-team;
     grid-column: col-start 1 / col-end 10;
 
+    @media only screen and (max-width: $bp-smallScreen) {
+        padding-bottom: 5rem;           
+    }
+
+
     // top content 
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, 1fr) 2fr;
         grid-template-rows: minmax( 22rem ,3.5fr) repeat(2, 1fr) .5fr;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-rows: minmax( 22rem ,3.5fr) repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-rows: minmax( 22rem ,3.5fr) 1fr .5fr;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: minmax(25rem, min-content) 1fr .5fr;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-template-rows: minmax(25rem, min-content) 1fr .5fr;
+        }
     }
 
     &__heading {
@@ -39,6 +60,28 @@
         grid-template-rows: 1fr .2fr;
         grid-column-gap: 6rem;
         padding: 0 14rem;
+
+        @media only screen and (max-width: $bp-smallScreen) {
+            grid-template-columns: repeat(2, minmax(20rem , 1fr)); // responsive
+            grid-row-gap: 3rem;            
+        }
+
+        @media only screen and (max-width: $bp-big) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column-gap: 4rem;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            grid-row-gap: 4rem;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-template-columns: 1fr;
+            padding: 0 5rem;
+        }
     }
 
     &__member {
@@ -51,6 +94,11 @@
             border-radius: 50%;
             filter: blur(1px) brightness(60%);
             transition: .3s;
+
+            @media only screen and (max-width: $bp-large) {
+                filter: none;
+                transition: none;
+            }
         }
 
         &--namerole-box {
@@ -91,6 +139,11 @@
         &:hover .team__member--img {
             filter: blur(0px) brightness(100%);
             transform: scale(1.02);
+
+            @media only screen and (max-width: $bp-large) {
+                filter: none;
+                transform: none;
+            }
         }
     }
 }

@@ -2,12 +2,25 @@
     background-color: $color-skills;
     grid-column: col-start 1/ col-end 10;
 
+    @media only screen and (max-width: $bp-smallScreen) {
+        padding-bottom: 5rem;
+    }
+
     // top content
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
         grid-template-rows: 3.5fr repeat(2, 1fr) .5fr;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(4, minmax(8rem, 1fr));
+            grid-template-rows: 2fr repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: 1.5fr 1fr .5fr;
+        }
     }
 
     &__heading {
@@ -21,11 +34,28 @@
             width: 40%;
             left: 30%;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 2 / 4;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            padding-top: 2rem;
+        }
     }
 
     &__description {
         grid-column: 2 / 6;
         text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 2 / 4;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            font-weight: 300;
+        }
     }
 
     // bottom content
@@ -37,6 +67,28 @@
         grid-template-columns: repeat(auto-fit, minmax(19rem , 1fr)); // responsive
         grid-template-rows: 1fr .5fr;
         grid-column-gap: 8rem;
+
+        @media only screen and (max-width: $bp-smallScreen) {
+            grid-template-columns: repeat(2, minmax(20rem , 1fr)); // responsive
+            grid-row-gap: 3rem;            
+        }
+
+        @media only screen and (max-width: $bp-big) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column-gap: 4rem;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            grid-row-gap: 4rem;
+        }
+
+        @media only screen and (max-width: $bp-mobileBig) {
+            grid-template-columns: 1fr;
+            padding: 0 4rem;
+        }
     }
 
     &__graph {
@@ -76,10 +128,10 @@
 
         &--percentage {
             position: absolute;
-            font-size: 5rem;
+            font-size: 7rem;
             font-weight: 300;
             transform: translate(-50%, -50%);
-            top: 37%;
+            top: 40%;
             left: 52%;
             
             span {
@@ -89,7 +141,7 @@
         }
 
         &--text {
-        
+            text-transform: uppercase;
         }
     }
 }
