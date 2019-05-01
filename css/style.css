@@ -598,7 +598,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); } }
     @media only screen and (max-width: 37.5rem) {
       .portfolio__examples {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
     @media only screen and (max-width: 31rem) {
       .portfolio__examples {
         padding: 3rem; } }

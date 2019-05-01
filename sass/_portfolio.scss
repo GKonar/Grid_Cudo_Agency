@@ -137,7 +137,7 @@
         }
         
         @media only screen and (max-width: $bp-smallest) {
-            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+            grid-template-columns: repeat(auto-fit, minmax(30rem , 1fr)); // responsive
         }
 
         @media only screen and (max-width: $bp-mobileBig) {
