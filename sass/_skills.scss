@@ -31,12 +31,12 @@
     // bottom content
 
     &__graphs {
-        padding: 0 12rem;
+        padding: 0 10rem;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(19rem , 1fr)); // responsive
         grid-template-rows: 1fr .5fr;
-        grid-column-gap: 10rem;
+        grid-column-gap: 8rem;
     }
 
     &__graph {

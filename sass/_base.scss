@@ -34,6 +34,15 @@ $font-color-dark: #3c4761;
 $main-font: 'Titillium Web', sans-serif;
 
 // ***** MEDIA QUERRIES *****
+// @media only screen and (max-width: $bp-huge) {
+
+// }
+$bp-huge: 68rem;
+// $bp-large
+// $bp-big
+// $bp-medium
+// $bp-small
+// $bp-smallest
 
 
 *,
@@ -62,8 +71,8 @@ body {
     grid-template-rows: min-content 70vh repeat(7, min-content);
     grid-template-columns: repeat( 10, [col-start] 1fr [col-end]);
 
-    & > * {
-        font-size: 2rem;
+    @media only screen and (max-width: $bp-huge) {
+        grid-template-rows: min-content 70vh repeat(7, min-content);
     }
 }
 
