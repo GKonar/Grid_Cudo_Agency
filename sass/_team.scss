@@ -42,6 +42,10 @@
         &::after {
             @include after;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 3.5rem;
+        }
     }
 
     &__description {
@@ -55,27 +59,25 @@
 
     &__members {
         display: grid;
+        justify-content: center;
 
-        grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+        grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); 
         grid-template-rows: 1fr .2fr;
         grid-column-gap: 6rem;
         padding: 0 14rem;
 
         @media only screen and (max-width: $bp-smallScreen) {
-            grid-template-columns: repeat(2, minmax(20rem , 1fr)); // responsive
+            grid-template-columns: repeat(2, minmax(20rem , 1fr)); 
             grid-row-gap: 3rem;            
         }
 
         @media only screen and (max-width: $bp-big) {
-            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); 
+            grid-row-gap: 5rem;
         }
 
         @media only screen and (max-width: $bp-medium) {
             grid-column-gap: 4rem;
-        }
-        
-        @media only screen and (max-width: $bp-smallest) {
-            grid-row-gap: 4rem;
         }
 
         @media only screen and (max-width: $bp-mobileBig) {
@@ -88,6 +90,7 @@
         display: grid;
         grid-row-gap: 2.5rem;
         justify-items: center;
+        padding-bottom: 2rem;
 
         &--img {
             width: 100%;

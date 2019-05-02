@@ -10,13 +10,11 @@
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
-        grid-template-rows: repeat(3 ,1fr);
         justify-items: center;
 
 
         @media only screen and (max-width: $bp-medium) {
             grid-template-columns: min-content repeat(4, minmax(8rem, 1fr)) min-content;
-            grid-template-rows: .5fr 1fr .5fr;
         }
 
         @media only screen and (max-width: $bp-small) {
@@ -25,26 +23,30 @@
 
         @media only screen and (max-width: $bp-mobileBig) {
             grid-template-columns: min-content repeat(4, minmax(3rem, 1fr)) min-content;
-                grid-template-rows: .3fr 1fr .1fr;
         }
     }
 
     &__heading {
         letter-spacing: 4px;
-        padding-bottom: 2rem;
         text-align: center;
+        padding-top: 6rem;
 
         grid-column: 1 / 7;
         grid-row: 2 / 3; 
         justify-self: center;
 
         @media only screen and (max-width: $bp-medium) {
-            grid-column: 3 / 5;
+            grid-column: 2 / 7;
+            font-size: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            // grid-column: 3 / 5;
             font-size: 3.5rem;
         }
 
         @media only screen and (max-width: $bp-mobileBig) {
-            grid-column: 3 / 5;
+            // grid-column: 3 / 5;
             font-size: 2.5rem;
         }
 
@@ -57,6 +59,8 @@
     &__description {
         text-align: center;
         font-weight: 300;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
 
         grid-column: 2 / 6;
         grid-row: 3 / 4;
@@ -66,31 +70,25 @@
 
     &__opinions {
         display: grid;
-        grid-template-columns: repeat(auto-fit,  minmax(30rem, 1fr));
+        grid-template-columns: repeat(2,  minmax(30rem, 1fr));
         grid-gap: 5rem 10rem;
         justify-items: center;
+        padding: 5rem 10rem;
 
-        padding: 0 15rem;
-        padding-bottom: 10rem;
-
-        @media only screen and (max-width: $bp-smallest) {
-            padding: 0 10rem;
+        @media only screen and (max-width: $bp-huge) { //1100
+            grid-template-columns: repeat(auto-fit,  minmax(30rem, 1fr));
         }
-
-        @media only screen and (max-width: $bp-mobileBig) {
-            grid-template-columns: minmax(10rem, 1fr);
-            grid-gap: 2rem 5rem;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0 2rem;
+            padding-bottom: 4rem;
         }
     }
 
     &__opinion {
         display: grid;
-        grid-template-columns: min-content minmax(30rem, 35rem);
+        grid-template-columns: min-content minmax(10rem, 35rem);
         grid-gap: 1.5rem 3rem;
-
-        @media only screen and (max-width: $bp-smallest) {
-            grid-template-columns: min-content minmax(18rem, 35rem);
-        }
         
         &--img {
             grid-row: 1 / 4;

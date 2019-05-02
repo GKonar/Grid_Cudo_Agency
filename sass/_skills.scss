@@ -1,6 +1,7 @@
 .skills {
     background-color: $color-skills;
     grid-column: col-start 1/ col-end 10;
+    
 
     @media only screen and (max-width: $bp-smallScreen) {
         padding-bottom: 5rem;
@@ -10,16 +11,12 @@
     &__header {
         display: grid;
         grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
-        grid-template-rows: 3.5fr repeat(2, 1fr) .5fr;
         justify-items: center;
+
+        padding: 8rem 0;
 
         @media only screen and (max-width: $bp-small) {
             grid-template-columns: repeat(4, minmax(8rem, 1fr));
-            grid-template-rows: 2fr repeat(2, 1fr);
-        }
-
-        @media only screen and (max-width: $bp-smallest) {
-            grid-template-rows: 1.5fr 1fr .5fr;
         }
     }
 
@@ -38,6 +35,7 @@
         @media only screen and (max-width: $bp-small) {
             grid-column: 2 / 4;
             text-align: center;
+            font-size: 3.5rem;
         }
 
         @media only screen and (max-width: $bp-mobileBig) {
@@ -51,6 +49,7 @@
 
         @media only screen and (max-width: $bp-small) {
             grid-column: 2 / 4;
+            font-size: 1.7rem;
         }
 
         @media only screen and (max-width: $bp-mobileBig) {
@@ -64,17 +63,17 @@
         padding: 0 10rem;
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(19rem , 1fr)); // responsive
+        grid-template-columns: repeat(auto-fit, minmax(19rem , 1fr)); 
         grid-template-rows: 1fr .5fr;
         grid-column-gap: 8rem;
 
         @media only screen and (max-width: $bp-smallScreen) {
-            grid-template-columns: repeat(2, minmax(20rem , 1fr)); // responsive
+            grid-template-columns: repeat(2, minmax(20rem , 1fr)); 
             grid-row-gap: 3rem;            
         }
 
         @media only screen and (max-width: $bp-big) {
-            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr)); // responsive
+            grid-template-columns: repeat(auto-fit, minmax(20rem , 1fr));
         }
 
         @media only screen and (max-width: $bp-medium) {
@@ -83,6 +82,7 @@
         
         @media only screen and (max-width: $bp-smallest) {
             grid-row-gap: 4rem;
+            padding: 0 4rem;
         }
 
         @media only screen and (max-width: $bp-mobileBig) {

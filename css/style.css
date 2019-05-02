@@ -202,31 +202,19 @@ body {
 .services {
   grid-column: col-start 1 / col-end 10;
   background-color: #17c2a4;
-  color: #fff; }
+  color: #fff;
+  display: grid; }
   @media only screen and (max-width: 78rem) {
     .services {
       padding-bottom: 5rem; } }
   .services__header {
     display: grid;
     grid-template-columns: 2fr repeat(4, 1fr) 2fr;
-    grid-template-rows: 3.5fr repeat(2, 1fr) 0.5fr;
     justify-items: center; }
-    @media only screen and (max-width: 68rem) {
-      .services__header {
-        grid-template-rows: 2.5fr repeat(2, 1fr); } }
-    @media only screen and (max-width: 43rem) {
-      .services__header {
-        grid-template-rows: 2fr repeat(2, 1fr); } }
-    @media only screen and (max-width: 37.5rem) {
-      .services__header {
-        grid-template-rows: 1.5fr repeat(2, 1fr); } }
-    @media only screen and (max-width: 31rem) {
-      .services__header {
-        grid-template-rows: repeat(2, 1fr);
-        padding: 2.5rem 0; } }
   .services__heading {
     letter-spacing: 4px;
-    padding-bottom: 2rem;
+    padding: 8rem;
+    padding-bottom: 3rem;
     text-align: center;
     grid-column: 2 / 6;
     align-self: end; }
@@ -243,12 +231,14 @@ body {
       left: 32%; }
     @media only screen and (max-width: 50rem) {
       .services__heading {
-        font-size: 3.5rem; } }
+        padding: 5rem; } }
     @media only screen and (max-width: 37.5rem) {
       .services__heading {
-        font-size: 3rem; } }
+        font-size: 3.5rem;
+        padding: 2rem; } }
   .services__description {
     font-weight: 300;
+    padding-bottom: 5rem;
     grid-column: 2 / 6;
     text-align: center; }
     @media only screen and (max-width: 50rem) {
@@ -257,37 +247,16 @@ body {
   .services__steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-template-rows: 1fr .5fr;
-    grid-column-gap: 6rem;
-    padding: 0 14rem; }
+    grid-gap: 4rem;
+    padding: 10rem 10rem;
+    padding-top: 5rem; }
     @media only screen and (max-width: 78rem) {
       .services__steps {
-        grid-template-columns: repeat(2, minmax(20rem, 1fr));
-        grid-row-gap: 3rem; } }
-    @media only screen and (max-width: 56rem) {
-      .services__steps {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
-    @media only screen and (max-width: 50rem) {
-      .services__steps {
-        grid-column-gap: 4rem; } }
-    @media only screen and (max-width: 37.5rem) {
-      .services__steps {
-        grid-row-gap: 4rem; } }
-    @media only screen and (max-width: 31rem) {
-      .services__steps {
-        grid-template-columns: 1fr;
-        padding: 0 4rem; } }
+        padding: 5rem; } }
   .services__step {
     display: grid;
     justify-items: center;
-    grid-template-rows: 15rem repeat(2, min-content);
-    grid-row-gap: 3rem; }
-    @media only screen and (max-width: 78rem) {
-      .services__step {
-        grid-row-gap: 1.5rem; } }
-    @media only screen and (max-width: 31rem) {
-      .services__step {
-        grid-row-gap: .5rem; } }
+    grid-template-rows: 15rem repeat(2, min-content); }
   .services__title {
     text-transform: uppercase; }
   .services__text {
@@ -333,12 +302,16 @@ body {
       background-color: rgba(0, 0, 0, 0.15);
       position: relative;
       left: 38%; }
+    @media only screen and (max-width: 37.5rem) {
+      .team__heading {
+        font-size: 3.5rem; } }
   .team__description {
     text-align: center;
     font-weight: 300;
     grid-column: 2 / 6; }
   .team__members {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: 1fr .2fr;
     grid-column-gap: 6rem;
@@ -349,13 +322,11 @@ body {
         grid-row-gap: 3rem; } }
     @media only screen and (max-width: 56rem) {
       .team__members {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-row-gap: 5rem; } }
     @media only screen and (max-width: 50rem) {
       .team__members {
         grid-column-gap: 4rem; } }
-    @media only screen and (max-width: 37.5rem) {
-      .team__members {
-        grid-row-gap: 4rem; } }
     @media only screen and (max-width: 31rem) {
       .team__members {
         grid-template-columns: 1fr;
@@ -363,7 +334,8 @@ body {
   .team__member {
     display: grid;
     grid-row-gap: 2.5rem;
-    justify-items: center; }
+    justify-items: center;
+    padding-bottom: 2rem; }
     .team__member--img {
       width: 100%;
       border-radius: 50%;
@@ -410,15 +382,11 @@ body {
   .skills__header {
     display: grid;
     grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
-    grid-template-rows: 3.5fr repeat(2, 1fr) 0.5fr;
-    justify-items: center; }
+    justify-items: center;
+    padding: 8rem 0; }
     @media only screen and (max-width: 43rem) {
       .skills__header {
-        grid-template-columns: repeat(4, minmax(8rem, 1fr));
-        grid-template-rows: 2fr repeat(2, 1fr); } }
-    @media only screen and (max-width: 37.5rem) {
-      .skills__header {
-        grid-template-rows: 1.5fr 1fr .5fr; } }
+        grid-template-columns: repeat(4, minmax(8rem, 1fr)); } }
   .skills__heading {
     letter-spacing: 4px;
     padding-bottom: 2rem;
@@ -438,7 +406,8 @@ body {
     @media only screen and (max-width: 43rem) {
       .skills__heading {
         grid-column: 2 / 4;
-        text-align: center; } }
+        text-align: center;
+        font-size: 3.5rem; } }
     @media only screen and (max-width: 31rem) {
       .skills__heading {
         padding-top: 2rem; } }
@@ -447,7 +416,8 @@ body {
     text-align: center; }
     @media only screen and (max-width: 43rem) {
       .skills__description {
-        grid-column: 2 / 4; } }
+        grid-column: 2 / 4;
+        font-size: 1.7rem; } }
     @media only screen and (max-width: 31rem) {
       .skills__description {
         font-weight: 300; } }
@@ -469,7 +439,8 @@ body {
         grid-column-gap: 4rem; } }
     @media only screen and (max-width: 37.5rem) {
       .skills__graphs {
-        grid-row-gap: 4rem; } }
+        grid-row-gap: 4rem;
+        padding: 0 4rem; } }
     @media only screen and (max-width: 31rem) {
       .skills__graphs {
         grid-template-columns: 1fr;
@@ -519,28 +490,21 @@ body {
   display: grid; }
   .portfolio__header {
     display: grid;
-    grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
-    grid-template-rows: 3.5fr 1fr .5fr; }
+    grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr; }
     @media only screen and (max-width: 50rem) {
       .portfolio__header {
-        grid-template-columns: 2fr repeat(4, minmax(8rem, 1fr)) 2fr;
-        grid-template-rows: 2fr 1fr .5fr; } }
+        grid-template-columns: 2fr repeat(4, minmax(8rem, 1fr)) 2fr; } }
     @media only screen and (max-width: 43rem) {
       .portfolio__header {
-        grid-template-columns: 2fr repeat(4, minmax(5rem, 1fr)) 2fr;
-        grid-template-rows: 1.5fr 1fr .5fr; } }
-    @media only screen and (max-width: 31rem) {
-      .portfolio__header {
-        grid-template-rows: 1.2fr 1fr .3fr; } }
+        grid-template-columns: 2fr repeat(4, minmax(5rem, 1fr)) 2fr; } }
     @media only screen and (max-width: 25rem) {
       .portfolio__header {
-        grid-template-columns: repeat(4, minmax(8rem, 1fr));
-        grid-template-rows: 1.2fr 1fr .3fr; } }
+        grid-template-columns: repeat(4, minmax(8rem, 1fr)); } }
   .portfolio__heading {
     letter-spacing: 4px;
     padding-bottom: 2rem;
+    padding-top: 6rem;
     text-align: center;
-    margin: 0 auto;
     grid-column: 2 / 6;
     align-self: end; }
     @media only screen and (max-width: 50rem) {
@@ -548,10 +512,6 @@ body {
         font-size: 3.5rem;
         justify-items: center;
         grid-column: 1 / 7; } }
-    @media only screen and (max-width: 31rem) {
-      .portfolio__heading {
-        font-size: 2.5rem;
-        grid-column: 2 / 4; } }
     .portfolio__heading::after {
       content: '';
       margin-top: 1rem;
@@ -566,6 +526,7 @@ body {
   .portfolio__description {
     text-align: center;
     font-weight: 300;
+    padding-bottom: 3rem;
     grid-column: 2 / 6; }
     @media only screen and (max-width: 31rem) {
       .portfolio__description {
@@ -584,10 +545,15 @@ body {
     transition: .2s;
     margin: .4rem;
     margin-bottom: 3rem;
-    padding: 0 1rem; }
+    padding: 0 2rem;
+    font-size: 2rem; }
     .portfolio__nav-item:hover {
       background-color: #fff;
       cursor: pointer; }
+    @media only screen and (max-width: 25rem) {
+      .portfolio__nav-item {
+        font-size: 1.5rem;
+        padding: 0 2rem; } }
   .portfolio__nav-item-1 {
     grid-column: 4 / 5; }
   .portfolio__nav-item-2 {
@@ -597,7 +563,6 @@ body {
   .portfolio__nav-item-4 {
     grid-column: 7 / 8; }
   .portfolio__examples {
-    padding: 0 12rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     grid-template-rows: repeat(2, 1fr);
@@ -605,14 +570,10 @@ body {
     justify-items: center; }
     @media only screen and (max-width: 50rem) {
       .portfolio__examples {
-        padding: 0 6rem;
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); } }
     @media only screen and (max-width: 37.5rem) {
       .portfolio__examples {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
-    @media only screen and (max-width: 31rem) {
-      .portfolio__examples {
-        padding: 0rem; } }
   .portfolio__example {
     display: grid;
     grid-gap: 2.5rem 0;
@@ -652,33 +613,32 @@ body {
   .testimonials__header {
     display: grid;
     grid-template-columns: 2fr repeat(4, minmax(15rem, 1fr)) 2fr;
-    grid-template-rows: repeat(3, 1fr);
     justify-items: center; }
     @media only screen and (max-width: 50rem) {
       .testimonials__header {
-        grid-template-columns: min-content repeat(4, minmax(8rem, 1fr)) min-content;
-        grid-template-rows: .5fr 1fr .5fr; } }
+        grid-template-columns: min-content repeat(4, minmax(8rem, 1fr)) min-content; } }
     @media only screen and (max-width: 43rem) {
       .testimonials__header {
         grid-template-columns: min-content repeat(4, minmax(5rem, 1fr)) min-content; } }
     @media only screen and (max-width: 31rem) {
       .testimonials__header {
-        grid-template-columns: min-content repeat(4, minmax(3rem, 1fr)) min-content;
-        grid-template-rows: .3fr 1fr .1fr; } }
+        grid-template-columns: min-content repeat(4, minmax(3rem, 1fr)) min-content; } }
   .testimonials__heading {
     letter-spacing: 4px;
-    padding-bottom: 2rem;
     text-align: center;
+    padding-top: 6rem;
     grid-column: 1 / 7;
     grid-row: 2 / 3;
     justify-self: center; }
     @media only screen and (max-width: 50rem) {
       .testimonials__heading {
-        grid-column: 3 / 5;
+        grid-column: 2 / 7;
+        font-size: 3rem; } }
+    @media only screen and (max-width: 43rem) {
+      .testimonials__heading {
         font-size: 3.5rem; } }
     @media only screen and (max-width: 31rem) {
       .testimonials__heading {
-        grid-column: 3 / 5;
         font-size: 2.5rem; } }
     .testimonials__heading::after {
       content: '';
@@ -693,29 +653,27 @@ body {
   .testimonials__description {
     text-align: center;
     font-weight: 300;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
     grid-column: 2 / 6;
     grid-row: 3 / 4; }
   .testimonials__opinions {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(2, minmax(30rem, 1fr));
     grid-gap: 5rem 10rem;
     justify-items: center;
-    padding: 0 15rem;
-    padding-bottom: 10rem; }
+    padding: 5rem 10rem; }
+    @media only screen and (max-width: 68rem) {
+      .testimonials__opinions {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
     @media only screen and (max-width: 37.5rem) {
       .testimonials__opinions {
-        padding: 0 10rem; } }
-    @media only screen and (max-width: 31rem) {
-      .testimonials__opinions {
-        grid-template-columns: minmax(10rem, 1fr);
-        grid-gap: 2rem 5rem; } }
+        padding: 0 2rem;
+        padding-bottom: 4rem; } }
   .testimonials__opinion {
     display: grid;
-    grid-template-columns: min-content minmax(30rem, 35rem);
+    grid-template-columns: min-content minmax(10rem, 35rem);
     grid-gap: 1.5rem 3rem; }
-    @media only screen and (max-width: 37.5rem) {
-      .testimonials__opinion {
-        grid-template-columns: min-content minmax(18rem, 35rem); } }
     .testimonials__opinion--img {
       grid-row: 1 / 4;
       border-radius: 50%; }
