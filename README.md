@@ -1,6 +1,6 @@
 # Cudo web designers 
 
-## Project in progress, website from template. 
+## Website from template. 
 
 Practice css grid
 
